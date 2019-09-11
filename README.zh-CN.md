@@ -53,7 +53,7 @@ mentioned_mobile_list | false | 手机号列表，提醒手机号对应的群成
 msgtype | true | 消息类型，此时固定为markdown
 content | true | markdown内容，最长不超过4096个字节，必须是utf8编码 支持的格式详见 https://work.weixin.qq.com/api/doc#90000/90136/91770
 
-#### 图片格式消息
+#### 图片格式消息 ❌**暂不支持**
 
 ![WeChat Work message](wechat-work-msg-images.png "WeChat Work message")
 
