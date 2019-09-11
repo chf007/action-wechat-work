@@ -10,7 +10,7 @@
 
 #### 纯文本格式消息
 
-![WeChat Work message](action-message.png "WeChat Work message")
+![WeChat Work message](wechat-work-msg-text.png "WeChat Work message")
 
 ```yaml
 - name: WeChat Work notification by text
@@ -33,6 +33,8 @@ mentioned_mobile_list | false | 手机号列表，提醒手机号对应的群成
 
 #### markdown格式消息
 
+![WeChat Work message](wechat-work-msg-markdown.png "WeChat Work message")
+
 ```yaml
 - name: WeChat Work notification by markdown
   uses: chf007/action-wechat-work@master
@@ -53,6 +55,8 @@ content | true | markdown内容，最长不超过4096个字节，必须是utf8�
 
 #### 图片格式消息
 
+![WeChat Work message](wechat-work-msg-images.png "WeChat Work message")
+
 ```yaml
 - name: WeChat Work notification by image
   uses: chf007/action-wechat-work@master
@@ -71,6 +75,8 @@ base64 | true | 图片内容的base64编码
 md5 | true | 图片内容（base64编码前）的md5值
 
 #### 图文格式消息
+
+![WeChat Work message](wechat-work-msg-news.png "WeChat Work message")
 
 ```yaml
 - name: WeChat Work notification by news
