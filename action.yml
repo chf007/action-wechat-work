@@ -5,3 +5,12 @@ author: 'chf007 <chf007server@gmail.com>'
 branding:
   icon: 'message-circle'
   color: 'red'
+
+inputs:
+  msgtype:
+    description: '消息类型'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
