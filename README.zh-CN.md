@@ -43,9 +43,9 @@ mentioned_mobile_list | false | 手机号列表，提醒手机号对应的群成
   with:
     msgtype: markdown
     content: "实时新增用户反馈<font color=\"warning\">132例</font>，请相关同事注意。\n
-    >类型:<font color=\"comment\">用户反馈</font> \n
-    >普通用户反馈:<font color=\"comment\">117例</font> \n
-    >VIP用户反馈:<font color=\"comment\">15例</font>"
+    > 类型:<font color=\"comment\">用户反馈</font> \n
+    > 普通用户反馈:<font color=\"comment\">117例</font> \n
+    > VIP用户反馈:<font color=\"comment\">15例</font>"
 ```
 
 参数 | 必须 | 说明
@@ -71,7 +71,7 @@ content | true | markdown内容，最长不超过4096个字节，必须是utf8�
 参数 | 必须 | 说明
 ------------ | ------------- | -------------
 msgtype | true | 消息类型，此时固定为image
-base64 | true | 图片内容的base64编码
+base64 | true | 图片内容的base64编码 注：图片（base64编码前）最大不能超过2M，支持JPG,PNG格式
 md5 | true | 图片内容（base64编码前）的md5值
 
 #### 图文格式消息
@@ -91,6 +91,10 @@ md5 | true | 图片内容（base64编码前）的md5值
 ------------ | ------------- | -------------
 msgtype | true | 消息类型，此时固定为news
 articles | true | 图文消息，一个图文消息支持1到8条图文，必须是序列化后的JSON字符串
+articles.title | true | 标题，不超过128个字节，超过会自动截断
+articles.description | false | 描述，不超过512个字节，超过会自动截断
+articles.url | false | 点击后跳转的链接。
+articles.picurl | false | 图文消息的图片链接，支持JPG、PNG格式，较好的效果为大图 1068*455，小图150*150。
 
 #### 更多详细参数说明，参见 https://work.weixin.qq.com/api/doc#90000/90136/91770
 
