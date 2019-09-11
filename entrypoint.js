@@ -45,8 +45,11 @@ if (process.env.INPUT_MSGTYPE === 'markdown') {
 if (process.env.INPUT_MSGTYPE === 'image') {
 
   payload.msgtype = process.env.INPUT_MSGTYPE;
-  payload.base64 = process.env.INPUT_BASE64;
-  payload.md5 = process.env.INPUT_MD5;
+  payload.image = {
+    base64: process.env.INPUT_BASE64,
+    md5: process.env.INPUT_MD5,
+  };
+
 
 }
 
