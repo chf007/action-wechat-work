@@ -1,12 +1,21 @@
-workflow "Send notification on push" {
-  on = "push"
-  resolves = [
-    "WeChat Work notification",
-  ]
-}
+name: Send notification on push
+on: [push]
 
-action "WeChat Work notification" {
-  uses = "chf007/action-wechat-work@master"
-  secrets = ["WECHAT_WORK_WEBHOOK"]
-  args = "A new commit has been pushed to chf007/action-wechat-work."
-}
+jobs:
+  send-msg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: WeChat Work notification by text
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
+        with:
+          msgtype: text
+          content: 广州今日天气：29度，大部分多云，降雨概率：60%
+          mentioned_list:
+            - '@all'
+            - andreiguan
+          mentioned_mobile_list:
+            - '@all'
+            - 15002085767
+
