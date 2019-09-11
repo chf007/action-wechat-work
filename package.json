@@ -1,6 +1,6 @@
 {
   "name": "action-wechat-work",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "GitHub Action that sends a WeChat Work notification.",
   "private": true,
   "scripts": {
