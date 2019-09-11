@@ -1,0 +1,6 @@
+name: 'GitHub Action for WeChat Work'
+description: 'Send WeChat Work message. Run on any operating platform, such as Windows, Linux, Mac supported by GitHub'
+author: 'chf007 <chf007server@gmail.com>'
+branding:
+  icon: 'message-circle'
+  color: 'red'
