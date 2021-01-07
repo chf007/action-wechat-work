@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/chf007/action-wechat-work#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "lodash": "^4.17.19",
     "yargs": "^14.0.0"
   }
