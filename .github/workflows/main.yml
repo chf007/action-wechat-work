@@ -53,4 +53,4 @@ jobs:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: file
-          media_id: '2eNNDDAZxBnhGvz_KafNtCGC5lZOwJraS5BEe8EvzNAncouNQQrAghfE47uV5RGrg'
+          media_id: 2eNNDDAZxBnhGvz_KafNtCGC5lZOwJraS5BEe8EvzNAncouNQQrAghfE47uV5RGrg
