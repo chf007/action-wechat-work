@@ -8,7 +8,7 @@ LABEL "com.github.actions.color"="red"
 LABEL "repository"="https://github.com/chf007/action-wechat-work"
 LABEL "homepage"="https://github.com/chf007/action-wechat-work"
 LABEL "maintainer"="chf007 <chf007server@gmail.com>"
-LABEL "version"="1.0.3"
+LABEL "version"="1.0.4"
 
 ADD entrypoint.js package.json package-lock.json /
 RUN npm ci

@@ -1,6 +1,6 @@
 {
   "name": "action-wechat-work",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GitHub Action that sends a WeChat Work notification.",
   "private": true,
   "scripts": {
@@ -25,7 +25,7 @@
   "homepage": "https://github.com/chf007/action-wechat-work#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "lodash": "^4.17.19",
-    "yargs": "^14.0.0"
+    "lodash": "^4.17.21",
+    "yargs": "^16.2.0"
   }
 }

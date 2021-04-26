@@ -50,7 +50,6 @@ if (process.env.INPUT_MSGTYPE === 'image') {
     md5: process.env.INPUT_MD5,
   };
 
-
 }
 
 if (process.env.INPUT_MSGTYPE === 'news') {
@@ -69,6 +68,15 @@ if (process.env.INPUT_MSGTYPE === 'news') {
 
 }
 
+if (process.env.INPUT_MSGTYPE === 'file') {
+
+  payload.msgtype = process.env.INPUT_MSGTYPE;
+  payload.file = {
+    media_id: process.env.MEDIA_ID,
+  };
+
+}
+
 console.log('The message content in JSON format...');
 console.log(JSON.stringify(payload));
 
@@ -81,11 +89,11 @@ const url = process.env.WECHAT_WORK_BOT_WEBHOOK;
             'Content-Type': 'application/json'
         },
     });
-    console.log('Message sent ! Shutting down ...');
+    console.log('Message sent Success! Shutting down ...');
     process.exit(0);
 })()
     .catch((err) => {
         console.error(err.message);
-        console.error('Message :', err.response.data);
+        console.error('Message sent error:', err.response.data);
         process.exit(1);
     });
