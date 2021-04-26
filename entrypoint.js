@@ -72,7 +72,7 @@ if (process.env.INPUT_MSGTYPE === 'file') {
 
   payload.msgtype = process.env.INPUT_MSGTYPE;
   payload.file = {
-    media_id: process.env.MEDIA_ID,
+    media_id: process.env.INPUT_MEDIA_ID,
   };
 
 }

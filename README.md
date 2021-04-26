@@ -115,8 +115,9 @@ articles.picurl | false | 图文消息的图片链接，支持 JPG、PNG 格式�
 msgtype | true | 消息类型，此时固定为 file
 media_id | true | 文件 id，通过 [文件上传接口](https://work.weixin.qq.com/api/doc/90000/90136/91770) 获取
 
-### 更多详细参数说明，参见 [https://work.weixin.qq.com/api/doc/90000/90136/91770](https://work.weixin.qq.com/api/doc/90000/90136/91770)
-
 ### WECHAT_WORK_BOT_WEBHOOK
 
-* **`WECHAT_WORK_BOT_WEBHOOK`**: 企业微信 Webhook URL (**required**, 参见 [https://work.weixin.qq.com/api/doc/90000/90136/91770](https://work.weixin.qq.com/api/doc/90000/90136/91770)).
+* **`WECHAT_WORK_BOT_WEBHOOK`**: 企业微信 Webhook URL (**required**)
+* 在 GitHub 仓库的 Settings - Secrets 中设置
+
+### 更多企业微信机器人详细说明，参见 [https://work.weixin.qq.com/api/doc/90000/90136/91770](https://work.weixin.qq.com/api/doc/90000/90136/91770)
