@@ -113,7 +113,7 @@ articles.picurl | false | 图文消息的图片链接，支持 JPG、PNG 格式�
 参数 | 必须 | 说明
 ------------ | ------------- | -------------
 msgtype | true | 消息类型，此时固定为 file
-media_id | true | 文件 id，通过[文件上传接口](https://work.weixin.qq.com/api/doc/90000/90136/91770)获取
+media_id | true | 文件 id，通过 [文件上传接口](https://work.weixin.qq.com/api/doc/90000/90136/91770) 获取
 
 ### 更多详细参数说明，参见 [https://work.weixin.qq.com/api/doc/90000/90136/91770](https://work.weixin.qq.com/api/doc/90000/90136/91770)
 
