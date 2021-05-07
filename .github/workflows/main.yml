@@ -3,7 +3,10 @@ on: [push]
 
 jobs:
   send-msg:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       # 纯文本类型
       - name: WeChat Work notification by text
