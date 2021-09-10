@@ -26,7 +26,7 @@
   "homepage": "https://github.com/chf007/action-wechat-work#readme",
   "dependencies": {
     "@vercel/ncc": "^0.28.5",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "lodash": "^4.17.21",
     "yargs": "^16.2.0"
   }
