@@ -1,6 +1,6 @@
 # WeChat Work for GitHub Actions
 
-通过企业微信机器人发送消息
+通过企业微信机器人发送消息。
 
 ![WeChat Work Logo](wechat-work-logo.png "WeChat Work Logo")
 
