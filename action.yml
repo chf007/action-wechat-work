@@ -8,8 +8,29 @@ branding:
 
 inputs:
   msgtype:
-    description: '消息类型'
+    description: '消息类型，当前支持 text markdown image news file'
     required: true
+  content:
+    description: '当 msgtype=text 时：文本内容，最长不超过 2048 个字节，必须是 utf8 编码；当 msgtype=text 时：markdown 内容，最长不超过 4096 个字节，必须是 utf8 编码 支持的格式详见 https://work.weixin.qq.com/api/doc/90000/90136/91770'
+    required: false
+  mentioned_list:
+    description: 'userid 的列表，提醒群中的指定成员(@某个成员)，@all表示提醒所有人，如果开发者获取不到 userid，可以使用 mentioned_mobile_list，必须是序列化后的 JSON 字符串'
+    required: false
+  mentioned_mobile_list:
+    description: '手机号列表，提醒手机号对应的群成员(@某个成员)，@all表示提醒所有人，必须是序列化后的 JSON 字符串'
+    required: false
+  base64:
+    description: '图片内容的 base64 编码 注：图片（base64 编码前）最大不能超过 2 M，支持 JPG、PNG 格式'
+    required: false
+  md5:
+    description: '图片内容（base64 编码前）的 md5 值'
+    required: false
+  articles:
+    description: '图文消息，一个图文消息支持 1 到 8 条图文，必须是序列化后的 JSON 字符串'
+    required: false
+  media_id:
+    description: '文件 id，通过 [文件上传接口](https://work.weixin.qq.com/api/doc/90000/90136/91770) 获取'
+    required: false
 
 runs:
   using: 'node12'
