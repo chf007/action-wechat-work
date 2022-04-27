@@ -1,6 +1,4 @@
 const axios = require('axios');
-const _ = require('lodash');
-const { argv } = require('yargs');
 
 const payload = {};
 
@@ -93,7 +91,8 @@ const url = process.env.WECHAT_WORK_BOT_WEBHOOK;
     process.exit(0);
 })()
     .catch((err) => {
-        console.error(err.message);
-        console.error('Message sent error:', err.response.data);
+        console.error('Message sent error:');
+        err.message && console.error(err.message);
+        err.response && err.response.data && console.error(err.response.data);
         process.exit(1);
     });
