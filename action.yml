@@ -8,7 +8,7 @@ branding:
 
 inputs:
   msgtype:
-    description: '消息类型，当前支持 text markdown image news file'
+    description: '消息类型，当前支持 text markdown image news file template_card'
     required: true
   content:
     description: '当 msgtype=text 时：文本内容，最长不超过 2048 个字节，必须是 utf8 编码；当 msgtype=text 时：markdown 内容，最长不超过 4096 个字节，必须是 utf8 编码 支持的格式详见 https://work.weixin.qq.com/api/doc/90000/90136/91770'
@@ -30,6 +30,9 @@ inputs:
     required: false
   media_id:
     description: '文件 id，通过 [文件上传接口](https://work.weixin.qq.com/api/doc/90000/90136/91770) 获取'
+    required: false
+  template_card:
+    description: '模版卡片参数，必须是序列化后的 JSON 字符串，参数详见 https://developer.work.weixin.qq.com/document/path/91770#%E6%A8%A1%E7%89%88%E5%8D%A1%E7%89%87%E7%B1%BB%E5%9E%8B'
     required: false
 
 runs:

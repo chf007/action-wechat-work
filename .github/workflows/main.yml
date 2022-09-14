@@ -15,7 +15,7 @@ jobs:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: text
-          content: 广州今日天气：29度，大部分多云，降雨概率：60%
+          content: "广州今日天气：29度，大部分多云，降雨概率：60%"
           mentioned_list: '["@all"]'
 
       # markdown类型
@@ -57,3 +57,21 @@ jobs:
         with:
           msgtype: file
           media_id: 2eNNDDAZxBnhGvz_KafNtCGC5lZOwJraS5BEe8EvzNAncouNQQrAghfE47uV5RGrg
+
+      # 模版卡片类型 - 文本通知模版卡片
+      - name: WeChat Work notification by template_card.text_notice
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
+        with:
+          msgtype: template_card
+          template_card: '{"card_type":"text_notice","source":{"icon_url":"https://wework.qpic.cn/wwpic/252813_jOfDHtcISzuodLa_1629280209/0","desc":"企业微信","desc_color":0},"main_title":{"title":"欢迎使用企业微信","desc":"您的好友正在邀请您加入企业微信"},"emphasis_content":{"title":"100","desc":"数据含义"},"quote_area":{"type":1,"url":"https://work.weixin.qq.com/?from=openApi","appid":"APPID","pagepath":"PAGEPATH","title":"引用文本标题","quote_text":"Jack：企业微信真的很好用~\nBalian：超级好的一款软件！"},"sub_title_text":"下载企业微信还能抢红包！","horizontal_content_list":[{"keyname":"邀请人","value":"张三"},{"keyname":"企微官网","value":"点击访问","type":1,"url":"https://work.weixin.qq.com/?from=openApi"},{"keyname":"企微下载","value":"企业微信.apk","type":2,"media_id":"MEDIAID"}],"jump_list":[{"type":1,"url":"https://work.weixin.qq.com/?from=openApi","title":"企业微信官网"},{"type":2,"appid":"APPID","pagepath":"PAGEPATH","title":"跳转小程序"}],"card_action":{"type":1,"url":"https://work.weixin.qq.com/?from=openApi","appid":"APPID","pagepath":"PAGEPATH"}}'
+
+      # 模版卡片类型 - 图文展示模版卡片
+      - name: WeChat Work notification by template_card.news_notice
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
+        with:
+          msgtype: template_card
+          template_card: '{"card_type":"news_notice","source":{"icon_url":"https://wework.qpic.cn/wwpic/252813_jOfDHtcISzuodLa_1629280209/0","desc":"企业微信","desc_color":0},"main_title":{"title":"欢迎使用企业微信","desc":"您的好友正在邀请您加入企业微信"},"card_image":{"url":"https://wework.qpic.cn/wwpic/354393_4zpkKXd7SrGMvfg_1629280616/0","aspect_ratio":2.25},"image_text_area":{"type":1,"url":"https://work.weixin.qq.com","title":"欢迎使用企业微信","desc":"您的好友正在邀请您加入企业微信","image_url":"https://wework.qpic.cn/wwpic/354393_4zpkKXd7SrGMvfg_1629280616/0"},"quote_area":{"type":1,"url":"https://work.weixin.qq.com/?from=openApi","appid":"APPID","pagepath":"PAGEPATH","title":"引用文本标题","quote_text":"Jack：企业微信真的很好用~\nBalian：超级好的一款软件！"},"vertical_content_list":[{"title":"惊喜红包等你来拿","desc":"下载企业微信还能抢红包！"}],"horizontal_content_list":[{"keyname":"邀请人","value":"张三"},{"keyname":"企微官网","value":"点击访问","type":1,"url":"https://work.weixin.qq.com/?from=openApi"},{"keyname":"企微下载","value":"企业微信.apk","type":2,"media_id":"MEDIAID"}],"jump_list":[{"type":1,"url":"https://work.weixin.qq.com/?from=openApi","title":"企业微信官网"},{"type":2,"appid":"APPID","pagepath":"PAGEPATH","title":"跳转小程序"}],"card_action":{"type":1,"url":"https://work.weixin.qq.com/?from=openApi","appid":"APPID","pagepath":"PAGEPATH"}}'
