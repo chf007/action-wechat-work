@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/chf007/action-wechat-work#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^1.6.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0"
